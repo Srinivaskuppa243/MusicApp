@@ -1,0 +1,95 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
+}
+
+:root{
+  --primary-color:black;
+  --secondary-color:white;
+  --icon-color:red;
+  --dark-icon-color:white;
+
+  --light-bg: #A9C9FF;
+  --dark-bg: var(--primary-color);
+  --light-gradient: linear-gradient(90deg, #A9C9FF 0%, #A9C9FF 100%);
+  --dark-gradient: linear-gradient(90deg, #1a1a1a 0%, white 100%);
+}
+body{
+  background-color: var(--light-bg);
+  background-image: var(--light-gradient);
+  color: black;
+  transition: background-color 0.3s ease,color 0.3s ease;
+}
+.dark-mode{
+  background-color:var(--primary-color);
+  background-image: var(--dark-gradient);
+  color: var(--secondary-color)
+}
+.header{
+  top:0px;
+  z-index: 1000;
+  background-color: var(--light-bg);
+  transition: background-color 0.3s ease;
+}
+.dark-mode .header{
+  background-color: var(--dark-bg);
+}
+.album>img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.albums{
+  top:100px;
+  z-index: 100;
+  overflow-y: scroll;
+  height: 65vh;
+  scroll-behavior: smooth;
+  background-color: var(--light-bg);
+  transition: background-color 0.3s ease;
+  margin: 2px 0px;
+}
+.dark-mode .albums{
+  background-color: var(--dark-bg);
+}
+.albums::-webkit-scrollbar{
+  width: 8px;
+}
+.albums::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+.albums::-webkit-scrollbar-thumb{
+  background-color: var(--icon-color);
+  border-radius: 8px;
+}
+.dark-mode .albums::-webkit-scrollbar-thumb{
+  background-color: var(--dark-icon-color);
+}
+.player{
+  bottom: 0px;
+  z-index:1000;
+  background-color: var(--light-bg);
+  transition: background-color 0.3s ease;
+}
+.dark-mode .player{
+  background-color: var(--dark-bg);
+}
+.audio-player{
+  background-color: transparent;
+}
+.banner-music-image{
+  width: 100%;
+  height: 500px;
+}
+.banner-image>img{
+  height: 400px;
+}
+@media (max-width:768px){
+  .albums{
+    height: 75vh;
+    padding: 3px;
+    top:100px;
+  }
+}
