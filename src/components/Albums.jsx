@@ -8,8 +8,11 @@ const Albums = ({ setCurrSong, setIsPlaying, currImg, setCurrImg }) => {
     setIsPlaying(true);
   };
 
+  // Flatten all songs from albums into a single list
+  const allSongs = albums.flatMap((album) => album.songs);
+
   return (
-    <div className="albums container p-4 shadow border border-danger">
+    <div className="albums container p-4 shadow border border-danger position-fixed">
       {/* Current Playing Song Image */}
       <div className="row">
         <div className="col-12">
@@ -19,32 +22,25 @@ const Albums = ({ setCurrSong, setIsPlaying, currImg, setCurrImg }) => {
         </div>
       </div>
 
-      {/* Albums List */}
+      {/* Songs List (without album grouping) */}
       <div className="container">
-        {albums.map((album) => (
-          <div className="row my-2" key={album.id}>
-            {/* Album Title */}
-            <h3 className="text-center">{album.name}</h3>
-            <p className="text-center">{album.description}</p>
-
-            {/* Songs in Album */}
-            {album.songs.map((song) => (
-              <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" key={song.id}>
-                <div
-                  className="card shadow album"
-                  onClick={() => handleSongClick(song)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src={song.image} alt={song.title} className="album-cover img-fluid" />
-                  <div className="card-body text-center">
-                    <h5 className="card-title">{song.title}</h5>
-                    <p className="card-text">{song.artist}</p>
-                  </div>
+        <div className="row m-2">
+          {allSongs.map((song) => (
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" key={song.id}>
+              <div
+                className="card shadow album"
+                onClick={() => handleSongClick(song)}
+                style={{ cursor: "pointer" }}
+              >
+                <img src={song.image} alt={song.title} className="album-cover img-fluid" />
+                <div className="card-body text-center">
+                  <h5 className="card-title">{song.title}</h5>
+                  <p className="card-text">{song.artist}</p>
                 </div>
               </div>
-            ))}
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

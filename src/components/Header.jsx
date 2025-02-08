@@ -5,7 +5,7 @@ const Header = ({onHandleDark,mode}) => {
   return (
     <div className='header container p-3 shadow border border-danger position-fixed'>
       <div className='d-flex justify-content-between align-items-center'>
-        <h2 className='fw-bold header-title'>RhythmFlow</h2>
+        <h2 className='fw-bold header-title'>🎶 RhythmFlow</h2>
         <div className='header-content fs-2 d-flex align-items-center g-3'>
         <i className='bi bi-heart'></i>
         <button className='btn fs-2' onClick={()=>onHandleDark()}>

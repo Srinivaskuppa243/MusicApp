@@ -10,16 +10,22 @@
   --icon-color:red;
   --dark-icon-color:white;
 
-  --light-bg: #A9C9FF;
+  --light-bg: #FFDEE9;
   --dark-bg: var(--primary-color);
-  --light-gradient: linear-gradient(90deg, #A9C9FF 0%, #A9C9FF 100%);
+  --light-gradient: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
   --dark-gradient: linear-gradient(90deg, #1a1a1a 0%, white 100%);
 }
 body{
   background-color: var(--light-bg);
   background-image: var(--light-gradient);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
   color: black;
   transition: background-color 0.3s ease,color 0.3s ease;
+}
+.header, .albums, .player {
+  background: transparent;
 }
 .dark-mode{
   background-color:var(--primary-color);
@@ -37,10 +43,15 @@ body{
 }
 .album>img{
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
 }
-
+.album{
+  transition: transform .2s;
+}
+.album:hover{
+  transform: scale(1.1);
+}
 .albums{
   top:100px;
   z-index: 100;

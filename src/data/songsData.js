@@ -23,7 +23,7 @@ export const albums = [
       {
         id: 3,
         title: "One More Time",
-        artist: "Armaan malik",
+        artist: "G.V. Prakash Kumar",
         src: "./src/assets/music-folder/One _More_Time.mp3",
         image: "./src/assets/music-images/one_more_time.jpeg",
         category: "Newly Released",
@@ -38,7 +38,7 @@ export const albums = [
       {
         id: 1,
         title: "Addhamu lekka",
-        artist: "Saicharan Bhaskaruni",
+        artist: "Sai Charan Bhaskaruni",
         src: "./src/assets/music-folder/Addhamu_Lekka.mp3",
         image: "./src/assets/music-images/addhamu_leka.jpeg",
         category: "Newly Released",
@@ -54,7 +54,7 @@ export const albums = [
       {
         id: 3,
         title: "Lions Roar",
-        artist: "Ramana Gogula",
+        artist: "Vijay Prakash",
         src: "./src/assets/music-folder/Lions_Roar.mp3",
         image: "./src/assets/music-images/lions_roar.jpeg",
         category: "Newly Released",
@@ -78,7 +78,7 @@ export const albums = [
       {
         id: 2,
         title: "Raa Macha Macha",
-        artist: "Anantha Sriram",
+        artist: "Thaman S",
         src: "./src/assets/music-folder/Raa_Macha_Macha.mp3",
         image: "./src/assets/music-images/raa_macha.jpeg",
         category: "Telugu Songs",
@@ -103,7 +103,7 @@ export const albums = [
       {
         id: 1,
         title: "Chinni",
-        artist: " Thaman S",
+        artist: "Vishal Mishra",
         src: "./src/assets/music-folder/Chinni.mp3",
         image: "./src/assets/music-images/chinni.jpeg",
         category: "Hindi Songs",
