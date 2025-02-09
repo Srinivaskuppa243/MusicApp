@@ -26,8 +26,11 @@ const MusicApp = ({onHandleDark,mode}) => {
         <Player
           currSong={currSong}
           setCurrSong={setCurrSong}
+          currImg={currImg}
+          setCurrImg={setCurrImg}
           isPlaying={isPlaying}
           setIsPlaying={setIsPlaying}
+          albums={albums}
         />
         {/* Player-section end */}
     </div>

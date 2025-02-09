@@ -35,8 +35,6 @@ body{
 .header{
   top:0px;
   z-index: 1000;
-  background-color: var(--light-bg);
-  transition: background-color 0.3s ease;
 }
 .dark-mode .header{
   background-color: var(--dark-bg);
@@ -58,8 +56,6 @@ body{
   overflow-y: scroll;
   height: 65vh;
   scroll-behavior: smooth;
-  background-color: var(--light-bg);
-  transition: background-color 0.3s ease;
   margin: 2px 0px;
 }
 .dark-mode .albums{
@@ -81,8 +77,6 @@ body{
 .player{
   bottom: 0px;
   z-index:1000;
-  background-color: var(--light-bg);
-  transition: background-color 0.3s ease;
 }
 .dark-mode .player{
   background-color: var(--dark-bg);
@@ -92,10 +86,9 @@ body{
 }
 .banner-music-image{
   width: 100%;
-  height: 500px;
 }
 .banner-image>img{
-  height: 400px;
+  height: 500px;
 }
 @media (max-width:768px){
   .albums{

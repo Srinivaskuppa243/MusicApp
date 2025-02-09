@@ -11,6 +11,7 @@ const App = () => {
      <MusicApp 
      onHandleDark={handleDarkMode} 
      mode={dark}/>
+     
     </div>
   )
 }
